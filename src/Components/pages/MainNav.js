@@ -60,6 +60,10 @@ const MainNav = () => {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
+  const openLogin = () =>{
+    navigate("/login")
+  }
+
   const handleAdminDashboardClick = () => {
     // Navigate to the "Employee" route when the text is clicked
     navigate("/");
@@ -106,16 +110,16 @@ const MainNav = () => {
             ></img>
           </Col>
 
-          <Col className="d-lg-flex d-none d-sm-none">
+          {/* <Col className="d-lg-flex d-none d-sm-none">
             <CgMenuLeftAlt
               size={25}
               style={{ cursor: "pointer" }}
               onClick={handleShow}
             />
-          </Col>
-          <Col className="d-lg-flex d-none d-sm-none ">
+          </Col> */}
+          {/* <Col className="d-lg-flex d-none d-sm-none ">
             <span className="text-dark fw-bold">Welocome</span>
-          </Col>
+          </Col> */}
         </Row>
 
         <Row>
@@ -132,7 +136,7 @@ const MainNav = () => {
           <Col className="d-lg-none d-sm-flex">
             <BsThreeDotsVertical size={25} style={{ cursor: "pointer" }} />
           </Col>
-          <Col className="d-lg-flex d-none d-sm-none flex-row justify-content-end align-items-center">
+          {/* {/* <Col className="d-lg-flex d-none d-sm-none flex-row justify-content-end align-items-center">
             <Form.Control
               className=""
               size="sm"
@@ -213,9 +217,9 @@ const MainNav = () => {
                 >
                   9
                 </Badge>
-              </Col>
+              </Col> 
             </Row>
-          </Col>
+          </Col> */}
           <Col className='d-lg-flex d-none d-sm-none flex-row flex-wrap-wrap justify-content-center"align-items-center'>
             <div>
               <img
@@ -225,7 +229,7 @@ const MainNav = () => {
                 alt="Avatar"
               />
             </div>
-            <Dropdown>
+            {/* <Dropdown>
               <Dropdown.Toggle
                 variant="transparent"
                 id="dropdown-basic"
@@ -237,10 +241,10 @@ const MainNav = () => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item to={"/login"}>Login</Dropdown.Item>
+                <Dropdown.Item to={"/login"} onClick={openLogin}>Login</Dropdown.Item>
                 <Dropdown.Item href="#/action-2">My Profile</Dropdown.Item>
               </Dropdown.Menu>
-            </Dropdown>
+            </Dropdown> */}
           </Col>
         </Row>
       </Container>
