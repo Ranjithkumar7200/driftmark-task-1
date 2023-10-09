@@ -33,7 +33,7 @@ const Designation = () => {
     <Container fluid className='overflowX-hidden'>
         <Row className='d-flex flex-row mt-3 mb-4'>
             <Col className='fs-sm-6 md-6 fs-lg-4 fs-xxl-4 fs-xl-4' style={{fontWeight:"bolder", fontSize: window.innerWidth < 768 ? "16px" : "24px",}}>Designation List</Col>
-         
+        
             <Col className='d-flex justify-content-end align-items-center' ><Button onClick={addHandleShow} ><FaPlus/> Designation</Button></Col>
            
         </Row>
