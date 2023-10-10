@@ -21,30 +21,30 @@ const Sidebar = () => {
         
       };
   return (
-    <div className=''>
-    <Container fluid className='d-sm-none d-md-none d-lg-block d-xxl-block d-xl-block d-none mt-3'>
-        <Row className='mt-3 mb-3'>
+    <div className='rounded overflowX-scroll' style={{backgroundColor:"#00d4ff"}}>
+    <Container fluid className='d-sm-none d-md-none d-lg-flex d-xxl-flex d-xl-flex flex-column justify-content-center align-items-start d-none mt-3'>
+        <Row className='mt-3 mb-3' style={{cursor:"pointer"}}>
         <h6 onClick={handleAdminDashboardClick}>Admin Dashboard</h6>
         </Row>
-        <Row className='mt-3 mb-3'>
+        <Row className='mt-3 mb-3' style={{cursor:"pointer"}}>
         <h6 onClick={handleEmployeeDashboardClick}>Employee Dashboard</h6>
         </Row>
-        <Row className='mt-3 mb-3'>
+        <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
             <h6>Employee</h6>
         </Row>
-        <Row className='mt-3 mb-3'>
+        <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
             <h6>Attendance</h6>
         </Row>
-        <Row className='mt-3 mb-3'>
+        <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
             <h6>Time Sheet</h6>
         </Row>
-        <Row>
+        <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
             <h6>Leave</h6>
         </Row>
-        <Row className='mt-3 mb-3'>
+        <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
         <h6 onClick={handleDesignationClick}>Designation</h6>
         </Row>
-        <Row className='mt-3 mb-3'>
+        <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
             <h6>Report</h6>
         </Row>
     </Container>

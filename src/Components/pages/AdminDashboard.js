@@ -240,8 +240,8 @@ const AdminDashboard = () => {
           </Col>
         </Row>
         <Row
-          className="d-flex flex-sm-column flex-column flex-md-column flex-lg-row flex-xl-row flex-xxl-row justify-content-between flex-wrap flex-md-row align-items-center overflow-hidden"
-          style={{ margin: "6px" }}
+          className="d-flex flex-sm-column mt-6 flex-column flex-md-column flex-lg-row flex-xl-row flex-xxl-row justify-content-between flex-wrap flex-md-row align-items-center overflow-hidden"
+          style={{ }}
         >
           <Col className="rounded  ">
             <Bar
