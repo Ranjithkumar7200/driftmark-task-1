@@ -10,32 +10,20 @@ import {
   Offcanvas,
   Row,
 } from "react-bootstrap";
-import { CgMenuLeftAlt } from "react-icons/cg";
-import { FaRegBell } from "react-icons/fa";
-import { LuMessageCircle } from "react-icons/lu";
+
 import {
   AiOutlineMenu,
-  AiOutlineDashboard,
-  AiOutlineAppstore,
-  AiOutlineUsergroupAdd,
-  AiOutlineProject,
-  AiOutlineAccountBook,
-  AiOutlinePayCircle,
+  
 } from "react-icons/ai";
-import { BsThreeDotsVertical, BsTicket } from "react-icons/bs";
-import { BiSearch } from "react-icons/bi";
-import { SiGoogleadsense } from "react-icons/si";
-import { FcSalesPerformance } from "react-icons/fc";
-import {
-  MdOutlineCancel,
-  MdOutlineExitToApp,
-  MdOutlinePolicy,
-} from "react-icons/md";
-import { LiaChartPieSolid, LiaGraduationCapSolid } from "react-icons/lia";
-import { GrAnnounce } from "react-icons/gr";
-import { GoGoal } from "react-icons/go";
-import { FaRegPenToSquare } from "react-icons/fa6";
+import { BsThreeDotsVertical} from "react-icons/bs";
+
+
+
 import { Link, useNavigate } from "react-router-dom";
+import { GrUserAdmin } from "react-icons/gr";
+import { BiNotepad, BiSolidPieChartAlt2, BiSolidUser, BiSolidUserDetail } from "react-icons/bi";
+import { SiGooglesheets } from "react-icons/si";
+import { SlCalender } from "react-icons/sl";
 
 const languages = [
   {
@@ -270,29 +258,30 @@ const MainNav = () => {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-        <Row className='mt-3 mb-3' style={{cursor:"pointer"}}>
-        <h6 onClick={handleAdminDashboardClick}>Admin Dashboard</h6>
+        <Row className='mt-4 mb-3 ' style={{cursor:"pointer",}} onClick={handleAdminDashboardClick}>
+          
+          <h6 className='d-flex align-items-center'><GrUserAdmin size={20} style={{marginRight:"10px"}}/>Admin Dashboard</h6>
         </Row>
         <Row className='mt-3 mb-3' style={{cursor:"pointer"}}>
-        <h6 onClick={handleEmployeeDashboardClick}>Employee Dashboard</h6>
+        <h6 onClick={handleEmployeeDashboardClick}><BiSolidUserDetail size={20} style={{marginRight:"10px"}}/> Employee Dashboard</h6>
         </Row>
         <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6>Employee</h6>
+            <h6><BiSolidUser size={20} style={{marginRight:"10px"}}/> Employee</h6>
         </Row>
         <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6>Attendance</h6>
+            <h6> <BiNotepad  size={20} style={{marginRight:"10px"}}/>Attendance</h6>
         </Row>
         <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6>Time Sheet</h6>
+            <h6><SiGooglesheets size={20} style={{marginRight:"10px"}}/>Time Sheet</h6>
         </Row>
         <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6>Leave</h6>
+            <h6><SlCalender size={20} style={{marginRight:"10px"}}/>Leave</h6>
         </Row>
         <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-        <h6 onClick={handleDesignationClick}>Designation</h6>
+        <h6 onClick={handleDesignationClick}><BiSolidUser size={20} style={{marginRight:"10px"}}/>Designation</h6>
         </Row>
         <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6>Report</h6>
+            <h6><BiSolidPieChartAlt2 size={20} style={{marginRight:"10px"}}/>Report</h6>
         </Row>
     
           </Offcanvas.Body>
