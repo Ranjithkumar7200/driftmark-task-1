@@ -1,9 +1,11 @@
-import { hover } from '@testing-library/user-event/dist/hover';
 import React from 'react'
 import { Accordion, Col, Container, Row } from 'react-bootstrap'
-import { AiOutlineDashboard } from 'react-icons/ai';
+import { SlCalender} from 'react-icons/sl';
 import { useNavigate } from 'react-router-dom';
 import '../pages/Css/Sidebar.css'
+import { GrUserAdmin } from 'react-icons/gr';
+import { BiNotepad, BiSolidPieChartAlt2, BiSolidUser, BiSolidUserDetail } from 'react-icons/bi';
+import { SiGooglesheets } from 'react-icons/si';
 
 const Sidebar = () => {
     const navigate = useNavigate();
@@ -23,32 +25,35 @@ const Sidebar = () => {
         
       };
   return (
-    <div className='rounded overflowX-scroll' style={{backgroundColor:"#00d4ff",}}>
-    <Container fluid className='d-sm-none d-md-none d-lg-flex d-xxl-flex d-xl-flex flex-column justify-content-center align-items-start d-none mt-3'>
-        <Row className='mt-3 mb-3 side' style={{cursor:"pointer"}}>
-        <h6 onClick={handleAdminDashboardClick}>Admin Dashboard</h6>
+    <div className='rounded 'style={{marginRight:"5px"}} >
+    <Container fluid className='d-sm-none  d-md-none d-lg-block d-xxl-block d-xl-block  justify-content-start align-items-start d-none ' style={{backgroundColor:"#313947",height:"92vh",width:"100%",overflowY:"auto",marginLeft:"-12px",opacity:""}}>
+        <Row className='mt-4 mb-3 ' style={{cursor:"pointer",}} onClick={handleAdminDashboardClick}>
+          
+          <h6 className='d-flex align-items-center' style={{fontSize:"15px",color:"white"}}><GrUserAdmin  size={20} style={{marginRight:"10px"}}/>Admin Dashboard</h6>
         </Row>
         <Row className='mt-3 mb-3' style={{cursor:"pointer"}}>
-        <h6 onClick={handleEmployeeDashboardClick}>Employee Dashboard</h6>
+        <h6 onClick={handleEmployeeDashboardClick} className='d-flex align-items-center' style={{fontSize:"15px"}}><BiSolidUserDetail size={20} style={{marginRight:"10px"}}/> Employee Dashboard</h6>
         </Row>
         <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6>Employee</h6>
+            <h6 className='d-flex align-items-center' style={{fontSize:"15px"}}><BiSolidUser size={20} style={{marginRight:"10px"}}/> Employee</h6>
         </Row>
         <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6>Attendance</h6>
+            <h6 className='d-flex align-items-center' style={{fontSize:"15px"}}> <BiNotepad  size={20} style={{marginRight:"10px"}}/>Attendance</h6>
         </Row>
         <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6>Time Sheet</h6>
+            <h6 className='d-flex align-items-center' style={{fontSize:"15px"}}><SiGooglesheets size={20} style={{marginRight:"10px"}}/>Time Sheet</h6>
         </Row>
         <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6>Leave</h6>
+            <h6 className='d-flex align-items-center' style={{fontSize:"15px"}}><SlCalender size={20} style={{marginRight:"10px"}}/>Leave</h6>
         </Row>
         <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-        <h6 onClick={handleDesignationClick}>Designation</h6>
+        <h6 className='d-flex align-items-center' style={{fontSize:"15px"}} onClick={handleDesignationClick}><BiSolidUser size={20} style={{marginRight:"10px"}}/>Designation</h6>
         </Row>
         <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6>Report</h6>
+            <h6 className='d-flex align-items-center' style={{fontSize:"15px"}}><BiSolidPieChartAlt2 size={20} style={{marginRight:"10px"}}/>Report</h6>
         </Row>
+        
+     
     </Container>
     </div>
   )
