@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Button, Col, Container, Form, InputGroup, Row } from 'react-bootstrap'
 import MainLogo from '../Images/logo.jpeg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
 
-const Login = () => {
+const Login = ({ setAuthenticated }) => {
     const [password,setPassword]=useState(false);
+    const history = useNavigate();
     
     const showPassword = ()=>{
         let eye =document.getElementById("password");
@@ -17,6 +18,15 @@ const Login = () => {
             setPassword(false)
         }
     }
+
+    const handleLogin = () => {
+        // Simulate authentication by setting authenticated to true.
+        setAuthenticated(true);
+    
+        // You can also redirect the user to a different page after successful login.
+        // For example, redirect to the admin dashboard ("/").
+        history('/');
+      };
   return (
     <Container  className='vh-100 d-flex flex-column flex-wrap-wrap justify-content-center align-items-center'>
         <Row>
@@ -58,7 +68,7 @@ const Login = () => {
                 
             </Form.Group>
             
-            <Button className='mt-3 text-dark btn btn-outline-dark' style={{backgroundColor:"#00d4ff",outline:"none",border:"none"}}>Login</Button>
+            <Button className='mt-3 text-dark btn btn-outline-dark' style={{backgroundColor:"#00d4ff",outline:"none",border:"none"}} onClick={handleLogin}>Login</Button>
             <Row className='m-3'>
                 <p>Don't have an account yet?<Link style={{textDecoration:"none"}} to={"/register"}>Register</Link></p>
             </Row>
