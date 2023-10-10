@@ -24,6 +24,7 @@ import { GrUserAdmin } from "react-icons/gr";
 import { BiNotepad, BiSolidPieChartAlt2, BiSolidUser, BiSolidUserDetail } from "react-icons/bi";
 import { SiGooglesheets } from "react-icons/si";
 import { SlCalender } from "react-icons/sl";
+import { MdOutlineAdminPanelSettings } from "react-icons/md";
 
 const languages = [
   {
@@ -257,31 +258,31 @@ const MainNav = () => {
               DriftMark Technologies
             </Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
-        <Row className='mt-4 mb-3 ' style={{cursor:"pointer",}} onClick={handleAdminDashboardClick}>
+          <Offcanvas.Body style={{backgroundColor:"#313947"}}>
+          <Row className='mt-4 mb-3 p-2 d-flex align-items-center' style={{cursor:"pointer",color:"white"}} onClick={handleAdminDashboardClick} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
           
-          <h6 className='d-flex align-items-center'><GrUserAdmin size={20} style={{marginRight:"10px"}}/>Admin Dashboard</h6>
+          <h6 className='d-flex align-items-center ' ><MdOutlineAdminPanelSettings  size={20} style={{marginRight:"10px",}}/>Admin Dashboard</h6>
         </Row>
-        <Row className='mt-3 mb-3' style={{cursor:"pointer"}}>
-        <h6 onClick={handleEmployeeDashboardClick}><BiSolidUserDetail size={20} style={{marginRight:"10px"}}/> Employee Dashboard</h6>
+        <Row className='mt-3 mb-3 p-2 d-flex align-items-center' style={{cursor:"pointer",color:"white"}} onClick={handleEmployeeDashboardClick} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+        <h6  className='d-flex align-items-center' style={{fontSize:"15px",}}><BiSolidUserDetail size={20} style={{marginRight:"10px"}}/> Employee Dashboard</h6>
         </Row>
-        <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6><BiSolidUser size={20} style={{marginRight:"10px"}}/> Employee</h6>
+        <Row className='mt-3 mb-3 p-2 d-flex align-items-center'style={{cursor:"pointer",color:"white"}} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+            <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><BiSolidUser size={20} style={{marginRight:"10px",}}/> Employee</h6>
         </Row>
-        <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6> <BiNotepad  size={20} style={{marginRight:"10px"}}/>Attendance</h6>
+        <Row className='mt-3 mb-3 p-2 d-flex align-items-center'style={{cursor:"pointer",color:"white"}}onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+            <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}> <BiNotepad  size={20} style={{marginRight:"10px",}}/>Attendance</h6>
         </Row>
-        <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6><SiGooglesheets size={20} style={{marginRight:"10px"}}/>Time Sheet</h6>
+        <Row className='mt-3 mb-3 p-2 d-flex align-items-center'style={{cursor:"pointer",color:"white"}} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+            <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><SiGooglesheets size={20} style={{marginRight:"10px",}}/>Time Sheet</h6>
         </Row>
-        <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6><SlCalender size={20} style={{marginRight:"10px"}}/>Leave</h6>
+        <Row className='mt-3 mb-3 p-2 d-flex align-items-center'style={{cursor:"pointer",color:"white"}} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}> 
+            <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><SlCalender size={20} style={{marginRight:"10px",}}/>Leave</h6>
         </Row>
-        <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-        <h6 onClick={handleDesignationClick}><BiSolidUser size={20} style={{marginRight:"10px"}}/>Designation</h6>
+        <Row className='mt-3 mb-3 p-2 d-flex align-items-center'style={{cursor:"pointer",color:"white"}} onClick={handleDesignationClick} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+        <h6 className='d-flex align-items-center' style={{fontSize:"15px",}} ><BiSolidUser size={20} style={{marginRight:"10px",}}/>Designation</h6>
         </Row>
-        <Row className='mt-3 mb-3'style={{cursor:"pointer"}}>
-            <h6><BiSolidPieChartAlt2 size={20} style={{marginRight:"10px"}}/>Report</h6>
+        <Row className='mt-3 mb-3 p-2 d-flex align-items-center'style={{cursor:"pointer",color:"white"}} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+            <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><BiSolidPieChartAlt2 size={20} style={{marginRight:"10px",}}/>Report</h6>
         </Row>
     
           </Offcanvas.Body>

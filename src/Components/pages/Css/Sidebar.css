@@ -1,0 +1,6 @@
+.side{
+    color:"blue";
+}
+.side:hover{
+    color: aqua;
+}
