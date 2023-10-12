@@ -12,7 +12,7 @@ import {
 } from "react-bootstrap";
 
 import {
-  AiOutlineMenu,
+  AiOutlineMenu, AiOutlineProject,
   
 } from "react-icons/ai";
 import { BsThreeDotsVertical} from "react-icons/bs";
@@ -25,49 +25,16 @@ import { BiNotepad, BiSolidPieChartAlt2, BiSolidUser, BiSolidUserDetail } from "
 import { SiGooglesheets } from "react-icons/si";
 import { SlCalender } from "react-icons/sl";
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
+import { GiShakingHands } from "react-icons/gi";
+import { IoSettingsOutline } from "react-icons/io5";
+import { TbSpeakerphone } from "react-icons/tb";
+import { FaUsersGear } from "react-icons/fa6";
 
-const languages = [
-  {
-    img: "https://www.worldometers.info/img/flags/in-flag.gif",
-    langName: "English",
-  },
-  {
-    img: "https://www.worldometers.info/img/flags/in-flag.gif",
-    langName: "Spanish",
-  },
-  {
-    img: "https://www.worldometers.info/img/flags/in-flag.gif",
-    langName: "Hindi",
-  },
-  {
-    img: "https://www.worldometers.info/img/flags/in-flag.gif",
-    langName: "Tamil",
-  },
-];
+
 
 const MainNav = () => {
   const [show, setShow] = useState(false);
-  const navigate = useNavigate();
 
-  const openLogin = () =>{
-    navigate("/login")
-  }
-
-  const handleAdminDashboardClick = () => {
-    // Navigate to the "Employee" route when the text is clicked
-    navigate("/");
-    setShow(false);
-  };
-  const handleEmployeeDashboardClick = () => {
-    // Navigate to the "Employee" route when the text is clicked
-    navigate("/employee");
-    setShow(false);
-  };
-  const handleDesignationClick = () => {
-    // Navigate to the "Employee" route when the text is clicked
-    navigate("/designation");
-    setShow(false);
-  };
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -99,16 +66,7 @@ const MainNav = () => {
             ></img>
           </Col>
 
-          {/* <Col className="d-lg-flex d-none d-sm-none">
-            <CgMenuLeftAlt
-              size={25}
-              style={{ cursor: "pointer" }}
-              onClick={handleShow}
-            />
-          </Col> */}
-          {/* <Col className="d-lg-flex d-none d-sm-none ">
-            <span className="text-dark fw-bold">Welocome</span>
-          </Col> */}
+          
         </Row>
 
         <Row>
@@ -125,90 +83,7 @@ const MainNav = () => {
           <Col className="d-lg-none d-sm-flex">
             <BsThreeDotsVertical size={25} style={{ cursor: "pointer" }} />
           </Col>
-          {/* {/* <Col className="d-lg-flex d-none d-sm-none flex-row justify-content-end align-items-center">
-            <Form.Control
-              className=""
-              size="sm"
-              placeholder="Search here.."
-              style={{
-                borderRadius: "50px",
-                paddingRight: "30px",
-                backgroundColor: "",
-                width: "200px",
-              }}
-            ></Form.Control>
-            <div
-              className="position-absolute"
-              style={{ cursor: "pointer", padding: "10px" }}
-            >
-              <BiSearch />
-            </div>
-          </Col>
-          <Col className='d-lg-flex d-none d-sm-none flex-row flex-wrap-wrap justify-content-center"align-items-center'>
-            <div style={{ marginTop: "2px" }}>
-              <img
-                src="https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
-                className="rounded"
-                style={{ width: "20px", height: "20px" }}
-                alt="Avatar"
-              />
-            </div>
-            <Dropdown>
-              <Dropdown.Toggle
-                variant="transparent"
-                id="dropdown-basic"
-                className="d-flex align-items-center"
-              >
-                <Dropdown.Header style={{ fontWeight: "bolder" }}>
-                  Languages
-                </Dropdown.Header>
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                <Dropdown.Item to={"/login"}>English</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Tamil</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Telugu</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </Col>
-          <Col className="d-lg-flex d-none d-sm-none">
-            <Row className="">
-              <Col className="d-flex flex-row justify-content-center align-items-center">
-                <FaRegBell
-                  size={20}
-                  style={{ marginLeft: "8px", cursor: "pointer" }}
-                />
-                <Badge
-                  className=" d-flex justify-content-start align-items-start"
-                  style={{
-                    fontSize: "10px",
-                    borderRadius: "50%",
-                    cursor: "pointer",
-                    marginTop: "-20px",
-                  }}
-                  bg="primary"
-                >
-                  9
-                </Badge>
-                <LuMessageCircle
-                  size={20}
-                  style={{ marginLeft: "8px", cursor: "pointer" }}
-                />
-                <Badge
-                  className=" d-flex justify-content-start align-items-start"
-                  style={{
-                    fontSize: "10px",
-                    borderRadius: "50%",
-                    cursor: "pointer",
-                    marginTop: "-20px",
-                  }}
-                  bg="primary"
-                >
-                  9
-                </Badge>
-              </Col> 
-            </Row>
-          </Col> */}
+          
           <Col className='d-lg-flex d-none d-sm-none flex-row flex-wrap-wrap justify-content-center"align-items-center'>
             <div>
               <img
@@ -218,22 +93,7 @@ const MainNav = () => {
                 alt="Avatar"
               />
             </div>
-            {/* <Dropdown>
-              <Dropdown.Toggle
-                variant="transparent"
-                id="dropdown-basic"
-                className="d-flex align-items-center"
-              >
-                <Dropdown.Header style={{ fontWeight: "bolder" }}>
-                  Profile
-                </Dropdown.Header>
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                <Dropdown.Item to={"/login"} onClick={openLogin}>Login</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">My Profile</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown> */}
+           
           </Col>
         </Row>
       </Container>
@@ -259,32 +119,96 @@ const MainNav = () => {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body style={{backgroundColor:"#313947"}}>
-          <Row className='mt-4 mb-3 p-2 d-flex align-items-center' style={{cursor:"pointer",color:"white"}} onClick={handleAdminDashboardClick} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
-          
+          <Row className='p-2 d-flex align-items-center' onClick={()=>setShow(false)}>
+          <Link to={"/"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
           <h6 className='d-flex align-items-center ' ><MdOutlineAdminPanelSettings  size={20} style={{marginRight:"10px",}}/>Admin Dashboard</h6>
+          </Link>
         </Row>
-        <Row className='mt-3 mb-3 p-2 d-flex align-items-center' style={{cursor:"pointer",color:"white"}} onClick={handleEmployeeDashboardClick} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
-        <h6  className='d-flex align-items-center' style={{fontSize:"15px",}}><BiSolidUserDetail size={20} style={{marginRight:"10px"}}/> Employee Dashboard</h6>
+        <Row className='p-2 d-flex align-items-center' onClick={()=>setShow(false)}>
+          <Link to={"/employeeDashboard"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+          <h6  className='d-flex align-items-center' style={{fontSize:"15px",}}><BiSolidUserDetail size={20} style={{marginRight:"10px"}}/> Employee Dashboard</h6>
+
+          </Link>
         </Row>
-        <Row className='mt-3 mb-3 p-2 d-flex align-items-center'style={{cursor:"pointer",color:"white"}} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
-            <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><BiSolidUser size={20} style={{marginRight:"10px",}}/> Employee</h6>
+        <Row className='p-2 d-flex align-items-center' onClick={()=>setShow(false)}>
+        <Link to={"/employee"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+        <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><BiSolidUser size={20} style={{marginRight:"10px",}}/> Employee</h6>
+
+        </Link>
         </Row>
-        <Row className='mt-3 mb-3 p-2 d-flex align-items-center'style={{cursor:"pointer",color:"white"}}onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
-            <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}> <BiNotepad  size={20} style={{marginRight:"10px",}}/>Attendance</h6>
+        <Row className='p-2 d-flex align-items-center' onClick={()=>setShow(false)}>
+          <Link to={"/attendance"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+          <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}> <BiNotepad  size={20} style={{marginRight:"10px",}}/>Attendance</h6>
+
+          </Link>
         </Row>
-        <Row className='mt-3 mb-3 p-2 d-flex align-items-center'style={{cursor:"pointer",color:"white"}} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
-            <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><SiGooglesheets size={20} style={{marginRight:"10px",}}/>Time Sheet</h6>
+        <Row className='p-2 d-flex align-items-center' onClick={()=>setShow(false)}>
+        <Link to={"/timesheet"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+        <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><SiGooglesheets size={20} style={{marginRight:"10px",}}/>Time Sheet</h6>
+
+        </Link>
         </Row>
-        <Row className='mt-3 mb-3 p-2 d-flex align-items-center'style={{cursor:"pointer",color:"white"}} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}> 
-            <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><SlCalender size={20} style={{marginRight:"10px",}}/>Leave</h6>
+
+        <Row className='p-2 d-flex align-items-center' onClick={()=>setShow(false)}> 
+       <Link to={"/leave"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+       <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><SlCalender size={20} style={{marginRight:"10px",}}/>Leave</h6>
+
+       </Link>
         </Row>
-        <Row className='mt-3 mb-3 p-2 d-flex align-items-center'style={{cursor:"pointer",color:"white"}} onClick={handleDesignationClick} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
-        <h6 className='d-flex align-items-center' style={{fontSize:"15px",}} ><BiSolidUser size={20} style={{marginRight:"10px",}}/>Designation</h6>
+        <Row className='p-2 d-flex align-items-center' onClick={()=>setShow(false)}>
+       <Link to={"/designation"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+       <h6 className='d-flex align-items-center' style={{fontSize:"15px",}} ><FaUsersGear size={20} style={{marginRight:"10px",}}/>Designation</h6>
+
+       </Link>
         </Row>
-        <Row className='mt-3 mb-3 p-2 d-flex align-items-center'style={{cursor:"pointer",color:"white"}} onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
-            <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><BiSolidPieChartAlt2 size={20} style={{marginRight:"10px",}}/>Report</h6>
+        <Accordion className='mt-3 mb-3' >
+      <Accordion.Item eventKey="0"  style={{backgroundColor:"#313947",outline:"none",border:"none"}}>
+        <Accordion.Header className='' style={{ backgroundColor: '#313947',color:"white", }} ><BiSolidPieChartAlt2 size={20} style={{marginRight:"10px",}}/>Report  </Accordion.Header>
+        <Accordion.Body>
+        <Row onClick={()=>setShow(false)} >
+        <Link to={"/userReport"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+        <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}>User (Report)</h6>
+
+        </Link>
         </Row>
-    
+        <Row onClick={()=>setShow(false)}>
+            <Link to={"/attendanceReport"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+              <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}>Attendance (Report)</h6></Link>
+        </Row>
+        <Row onClick={()=>setShow(false)}>
+<Link to={"/leaveReport"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+<h6 className='d-flex align-items-center' style={{fontSize:"15px",}}>Leave (Report)</h6>
+
+</Link>
+        </Row>
+        </Accordion.Body>
+        </Accordion.Item>
+        </Accordion>
+        <Row className='p-2 d-flex align-items-center' onClick={()=>setShow(false)}>
+        <Link to={"/project"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+        <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><AiOutlineProject size={20} style={{marginRight:"10px",}}/>Projects</h6>
+
+        </Link>
+        </Row>
+        <Row className='p-2 d-flex align-items-center' onClick={()=>setShow(false)}>
+        <Link to={"/client"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+        <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><GiShakingHands size={20} style={{marginRight:"10px",}}/>Clients</h6>
+
+        </Link>
+        </Row>
+        <Row className='p-2 d-flex align-items-center' onClick={()=>setShow(false)}>
+        <Link to={"/setting"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+        <h6 className='d-flex align-items-center' style={{fontSize:"15px",}}><IoSettingsOutline size={20} style={{marginRight:"10px",}}/>Settings</h6>
+
+        </Link>
+        </Row>
+        <Row className='p-2 d-flex align-items-center'onClick={()=>setShow(false)}>
+        <Link to={"/promotion"} className='mt-2 mb-2 p-2 d-flex align-items-center' style={{textDecoration: 'none',color:"white",cursor:"pointer"}}  onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = "#00d4ff";e.currentTarget.style.color = "black"}}onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent";e.currentTarget.style.color = "white" }}>
+        <h6 className='d-flex align-items-center'  style={{fontSize:"15px",}}><TbSpeakerphone size={20} style={{marginRight:"10px",}}/>Promotion</h6>
+
+        </Link>
+        </Row>
+        
           </Offcanvas.Body>
         </Offcanvas>
       </Row>
